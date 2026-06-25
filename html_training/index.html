@@ -7,13 +7,10 @@
        <meta name="keywords" content="About me , HTML , Web development , pratice HTML">
        <meta name="robots" content="index, follow">
        <title>about me page</title> 
-        <meta name="author" content="omar safarini">
+       <meta name="author" content="omar safarini">
+        <link rel="stylesheet" href="../css_training/styles_before.css">
     </head>
     <body>
-        <header>
-            <h1>Omar Safarini, Software Engineer</h1>
-            <p>Software Engineer with experiance of backend , big data , frontend</p>
-        </header>
         
         <nav>
             <a href="#About_Section">About</a>
@@ -29,21 +26,28 @@
             <a href="#Contact_Info_Section">Contact Info</a>
         </nav>
 
-        <main>
-        <section id="About_Section">
-            <h2>About me</h2>
-            <p>
-                I am CAP(Computer Science Appernticeship Program) student currnetly studying
-                in An-Najah National University, with a focus on backend development and database 
-                system and developing a high-preformance and effecient applications that scale with ease
-            </p>    
-            <img 
-             src="https://avatars.githubusercontent.com/u/177975031?v=4"
-             alt="profile image" 
-             width="200"
-             fetchpriority="high">
-        </section>
+    <main>
+        <div class="intro_page">
+                <img
+                src="https://avatars.githubusercontent.com/u/177975031?v=4"
+                alt="profile image">
+            <div class="content">
+                <header>
+                    <h1>Omar Safarini, Software Engineer</h1>
+                    <p>Software Engineer with experience in backend, big data, and frontend.</p>
+                </header>
 
+                <section id="About_Section">
+                    <h2>About me</h2>
+                    <p>
+                        I am a CAP (Computer Science Apprenticeship Program) student currently studying
+                        at An-Najah National University, with a focus on backend development and database
+                        systems and developing high-performance and efficient applications that scale with ease.
+                    </p>
+                </section>
+            </div>
+        </div>
+    
         <section  id="Education_Section">
             <h2>Education</h2>
             <article id="programming_advices_courses_list">
@@ -80,30 +84,32 @@
             </article>
         </section>
 
-        <section id="Experiance_Section">
-            <h2>Experiance</h2>
-            <article>
-                <h3>Projects</h3>
-                <ol id="project_list">
-                    <li>recipe recommendation system project</li>
-                    <li>technician hiring platform</li>
-                    <li>ancura mobile project</li>
-                    <li>Edujoy</li>
-                    <li>BankProject</li>
-                    <li>Al-waffaa furniture</li>
-                </ol>
-            </article>
-        </section>
+        <div class="work_section">
+            <section id="Experiance_Section">
+                <h2>Experiance</h2>
+                <article>
+                    <h3>Projects</h3>
+                    <ol id="project_list">
+                        <li>recipe recommendation system project</li>
+                        <li>technician hiring platform</li>
+                        <li>ancura mobile project</li>
+                        <li>Edujoy</li>
+                        <li>BankProject</li>
+                        <li>Al-waffaa furniture</li>
+                    </ol>
+                </article>
+            </section>
 
-        <section id="Hobbies_Section">
-           <h2>Hobbies</h2>
-           <ul>
-                <li>Volleyball</li>
-                <li>Football(Soccer)</li>
-                <li>MMA</li>
-                <li>Video Games</li>
-           </ul> 
-        </section>
+            <section id="Hobbies_Section">
+                <h2>Hobbies</h2>
+                    <ul>
+                        <li>Volleyball</li>
+                        <li>Football(Soccer)</li>
+                        <li>MMA</li>
+                        <li>Video Games</li>
+                    </ul> 
+            </section>
+        </div>
 
         <section id="Table_Section">
             <h2>Table Books info</h2>
@@ -138,6 +144,8 @@
             </table>
         </section>
 
+    </main>
+    
         <footer id="Contact_Info_Section">
            <h2>Contact Info</h2>
            <address>
@@ -146,7 +154,5 @@
             social media : <a href="https://www.instagram.com/omar.saffarin/">instagram</a>
            </address>
         </footer>
-
-    </main>
     </body>
 </html>
