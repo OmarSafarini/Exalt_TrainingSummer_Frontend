@@ -211,14 +211,15 @@ nav a:hover::after {
 .hamburger {
     display: none;
     flex-direction: column;
-    gap: 5px;
     cursor: pointer;
     margin-left: auto;
+    font-size: 28px;
 }
-
+.hamburger:active{
+    background-color: #2f3136;
+    transform: scale(0.95);
+}
 .hamburger span {
-    width: 28px;
-    height: 3px;
     background: white;
     border-radius: 3px;
     transition: 0.3s ease;
@@ -333,11 +334,20 @@ table {
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-    display: block;
-    overflow-x: auto;
+}
+#Table_Section {
+    overflow-x: hidden;
 }
 #Table_Section h2{
     color : var(--main-color);
+}
+.desc-scroll {
+    max-height: 60px;
+    overflow-y: auto;
+    display: block;
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
+    overflow-x: hidden;
 }
 table thead,
 table tbody {
@@ -353,6 +363,8 @@ table th {
     text-align: center;
     font-weight: 700;
     font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    overflow: hidden;
 }
 
 table td {
@@ -362,9 +374,7 @@ table td {
     text-align: center;
     font-size: 0.95rem;
     line-height: 1.6;
-    white-space: normal;
-    word-break: break-word;
-    overflow-wrap: anywhere;
+    overflow-wrap:break-word;
 }
 
 table tr:nth-child(even) td {
@@ -437,8 +447,14 @@ footer p {
     opacity: 0.7;
 }
 @media (max-width: 800px) {
+    .icon{
+        display: none;
+    }
     .hamburger {
-        display: flex;
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
     }
     .nav-links {
         display: none;
@@ -452,18 +468,28 @@ footer p {
     #menu-toggle:checked ~ .nav-links {
         display: flex;
     }
+     #menu-toggle:checked ~ nav a {
+        display: block;
+    }
+
+    #menu-toggle:checked ~ nav {
+        flex-direction: column;
+        align-items: center;
+    }
     nav {
         align-items: flex-start;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
     }
     .intro_page {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
     }
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
+    nav a {
+        display: none;
+        width: 100%;
+        text-align: center;
+        padding: 12px;
     }
 
     table th,
@@ -471,4 +497,5 @@ footer p {
         padding: 10px 12px;
         font-size: 0.85rem;
     }
+    
 }
